@@ -26,6 +26,7 @@ Route::group([
 });
 
 Route::post('/profile/{id}', [RoleController::class, 'profile']);   // user's individual Profile show
+Route::get('/allusers', [RoleController::class, 'allusers']);   // user's individual Profile show
 
 
 //----------------------For_CRUD-----------------------------------

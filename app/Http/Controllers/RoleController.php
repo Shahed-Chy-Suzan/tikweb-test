@@ -12,4 +12,9 @@ class RoleController extends Controller
         $profile = DB::table('users')->where('id',$id)->first();
         return response()->json($profile);
       }
+  //------------ All Users -----------------------------
+      public function allusers(){
+        $allusers = DB::table('users')->get();
+        return response()->json($allusers);
+      }
 }

@@ -65,12 +65,12 @@
           <li class="nav-item">
             <router-link to='/profile' class="nav-link">
               <i class="fas fa-user fa-sm fa-fw"></i>
-              <span>User Profile</span></router-link>
+              <span>User Profile Show</span></router-link>
           </li>
           <li class="nav-item">
             <router-link to='/alluser' class="nav-link">
               <i class="fas fa-user fa-sm fa-fw"></i>
-              <span>All Users</span></router-link>
+              <span>All User's List</span></router-link>
           </li>
 
 
