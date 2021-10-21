@@ -85,19 +85,9 @@
             Privacy Section
           </div>
           <li class="nav-item">
-            <a class="nav-link" href="login.html">
-              <i class="fas fa-sign-in-alt"></i>
-              <span>Register</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="login.html">
-              <i class="fas fa-sign-in-alt"></i>
-              <span>Log in</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal">
+            <router-link to='/logout' class="nav-link">
               <i class="fas fa-sign-out-alt"></i>
-              <span>Log out</span></a>
+              <span>Log out</span></router-link>
           </li>
 
         </ul>
@@ -133,10 +123,6 @@
                   {{-- <router-link to="/profile" class="dropdown-item" href="#">
                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                     Profile
-                  </router-link> --}}
-                  {{-- <router-link to="/changePassword" class="dropdown-item" href="#">
-                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                    Password Change
                   </router-link> --}}
                   <router-link to="/logout" class="dropdown-item" href="#">
                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>

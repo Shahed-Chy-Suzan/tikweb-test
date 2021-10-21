@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 21, 2021 at 10:00 AM
+-- Generation Time: Oct 21, 2021 at 10:56 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.2
 
@@ -85,6 +85,7 @@ CREATE TABLE `users` (
   `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email_verified_at` timestamp NULL DEFAULT NULL,
   `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `user_role` int(11) NOT NULL DEFAULT 0,
   `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NULL DEFAULT current_timestamp()
@@ -94,9 +95,11 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Admin', 'admin@gmail.com', NULL, '$2y$10$nQ.J0QlWLynYZOTtZdtePOWSUycOzU1riUXXTBcwUUAXyphSjK5F2', NULL, '2021-08-12 20:44:25', '2021-08-12 20:44:25'),
-(2, 'suzan', 'suzan@gmail.com', NULL, '$2y$10$d50.Fdfsm.g7jzat9YuOEOIt9mzLY3paxdDdtEgt5WhVlwE9yl5TK', NULL, '2021-08-13 06:42:49', '2021-08-13 06:42:49');
+INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `user_role`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'Admin', 'admin@gmail.com', NULL, '$2y$10$nQ.J0QlWLynYZOTtZdtePOWSUycOzU1riUXXTBcwUUAXyphSjK5F2', 0, NULL, '2021-08-12 20:44:25', '2021-08-12 20:44:25'),
+(2, 'suzan', 'suzan@gmail.com', NULL, '$2y$10$d50.Fdfsm.g7jzat9YuOEOIt9mzLY3paxdDdtEgt5WhVlwE9yl5TK', 0, NULL, '2021-08-13 06:42:49', '2021-08-13 06:42:49'),
+(3, 'tikweb', 'tikweb@gmail.com', NULL, '$2y$10$yiX/yHGYEYbw2WgNzKhlNeEBSEvYDnAOAKnrIknDoSdljdUUxvtei', 0, NULL, '2021-10-21 08:14:09', '2021-10-21 08:14:09'),
+(4, 'admin2', 'admin2@gmail.com', NULL, '$2y$10$SlwTIf4OgS4lf7mpWTpCq.35KxzyzUFAZCcs.p7W20E9IRo1Ee94S', 0, NULL, '2021-10-21 08:49:46', '2021-10-21 08:49:46');
 
 --
 -- Indexes for dumped tables
@@ -148,7 +151,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
