@@ -33,7 +33,7 @@
                             </option>
                           </select>
                           <span class="flex-box col-md-4 d-inline">
-                            <button type="submit" class="submit btn btn-danger text-white"><i
+                            <button type="submit" class="submit btn btn-danger text-white" title="Update User Role"><i
                                 class="far fa-check-square"></i>
                             </button>
                           </span>
