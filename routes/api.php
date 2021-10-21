@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\RoleController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -23,6 +24,8 @@ Route::group([
   Route::post('refresh', [AuthController::class, 'refresh']);
   Route::post('me', [AuthController::class, 'me']);
 });
+
+Route::post('/profile/{id}', [RoleController::class, 'profile']);   // user's individual Profile show
 
 
 //----------------------For_CRUD-----------------------------------

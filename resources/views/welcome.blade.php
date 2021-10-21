@@ -37,32 +37,47 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
           <!-- Sidebar - Brand -->
-          <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+          <router-link to='/home' class="sidebar-brand d-flex align-items-center justify-content-center">
             <div class="sidebar-brand-icon ">
               <img src="{{asset("backend/img/img/white.png")}}"> <span>Tikweb-Test</span>
             </div>
-          </a>
+          </router-link>
           <!-- Divider -->
           <br>
           <hr class="sidebar-divider my-0">
 
           <!-- Nav Item - Dashboard -->
           <li class="nav-item active">
-            <a class="nav-link" href="index.html">
+            <router-link to='/home' class="nav-link">
               <i class="fas fa-fw fa-tachometer-alt"></i>
-              <span>Tikweb-Test-Dashboard</span></a>
+              <span>Tikweb-Test-Dashboard</span></router-link>
           </li>
 
           <!-- Divider -->
           <hr class="sidebar-divider">
 
-          <!-- Heading -->
-          <div class="sidebar-heading">
-            Product Section
-          </div>
-
           <!-- Nav Item - Pages Collapse Menu -->
 
+          <!-- Heading -->
+          <div class="sidebar-heading">
+            User Section
+          </div>
+          <li class="nav-item">
+            <router-link to='/profile' class="nav-link">
+              <i class="fas fa-user fa-sm fa-fw"></i>
+              <span>User Profile</span></router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to='/alluser' class="nav-link">
+              <i class="fas fa-user fa-sm fa-fw"></i>
+              <span>All Users</span></router-link>
+          </li>
+
+
+          <!-- Heading -->
+          <div class="sidebar-heading">
+            User Role Section
+          </div>
           <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages2"
               aria-expanded="true" aria-controls="collapsePages2">
