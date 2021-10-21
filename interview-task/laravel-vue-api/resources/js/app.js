@@ -1,8 +1,7 @@
 
 require('./bootstrap');
 
-// window.Vue = require('vue');     //--commented for being same meaning as next line
-import Vue from 'vue'    //--these nxt 3_lines are newly added as we installed vue-router
+import Vue from 'vue'
 import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
@@ -13,7 +12,6 @@ import {routes} from './routes';
 import User from './helpers/User';
 window.User = User                  //--for 'globally' use
 
-// Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
 //----start-----Sweetalert2------
 import Swal from 'sweetalert2'

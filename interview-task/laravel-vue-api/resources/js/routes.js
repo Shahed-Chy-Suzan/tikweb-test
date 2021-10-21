@@ -18,9 +18,9 @@ let home = require('./components/home.vue').default;
 
 
 export const routes = [
-  //-------JWT/auth_routes--------
+  //-------auth_routes--------
   { path: '/', component: Login, name: '/' },
-  { path: '/register', component: Register, name: 'register' },   //--JWT-auth
+  { path: '/register', component: Register, name: 'register' },   //--auth
   { path: '/forget', component: forgetPass, name: 'forget' },
   { path: '/logout', component: logout, name: 'logout' },
   { path: '/profile', component: profile, name: 'profile' },

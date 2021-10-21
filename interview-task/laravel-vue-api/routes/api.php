@@ -11,13 +11,13 @@ use Illuminate\Support\Facades\Route;
 // });
 
 
-//---------------------For_JWT-------------------------
+
 Route::group([
 
   'middleware' => 'api',
   'prefix' => 'auth'
 
-], function ($router) {                           //--JWT(auth)
+], function ($router) {
   Route::post('login', [AuthController::class, 'login']);
   Route::post('signup', [AuthController::class, 'signup']);
   Route::post('logout', [AuthController::class, 'logout']);
@@ -31,5 +31,3 @@ Route::post('/roleInsert', [RoleController::class, 'roleInsert']);   // insert U
 Route::get('/allRoles', [RoleController::class, 'allRoles']);   // show all user Role
 Route::put('/updateRole/{id}', [RoleController::class, 'updateRole']);   // show all user Role
 
-
-//----------------------For_CRUD-----------------------------------
