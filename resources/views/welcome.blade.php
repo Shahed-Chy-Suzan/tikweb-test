@@ -78,19 +78,22 @@
           <div class="sidebar-heading">
             User Role Section
           </div>
+          {{-- <li class="nav-item">
+            <router-link to='/userRole' class="nav-link">
+              <i class="fas fa-user fa-sm fa-fw"></i>
+              <span>User Role Management</span></router-link>
+          </li> --}}
           <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages2"
               aria-expanded="true" aria-controls="collapsePages2">
               <i class="fas fa-list"></i>
-              <span>Category</span>
+              <span>User Role Section</span>
             </a>
             <div id="collapsePages2" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
               <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Category:</h6>
-                <router-link to="/addCategory" class="collapse-item">Add Category</router-link>
-                <h6 class="collapse-header">Category List:</h6>
-                <router-link to="/categoryList" class="collapse-item">List</router-link>
-
+                <router-link to="/addRole" class="collapse-item">Create User Role</router-link>
+                <router-link to="/allRole" class="collapse-item">All User Role</router-link>
+                <router-link to="/userRole" class="collapse-item">Assign User Role</router-link>
               </div>
             </div>
           </li>

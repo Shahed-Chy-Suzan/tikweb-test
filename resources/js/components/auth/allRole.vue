@@ -5,7 +5,7 @@
       <div class="card shadow mb-4">
         <div class="card-header py-3 d-flex flex-row justify-content-between">
           <div>
-            <h4 class="m-0 font-weight-bold text-primary d-inline">User List Table</h4>
+            <h4 class="m-0 font-weight-bold text-primary d-inline">User Role List Table</h4>
           </div>
         </div>
 
@@ -14,16 +14,12 @@
               <table class="table table-striped table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                   <tr>
-                    <th>User Name</th>
-                    <th>User Email</th>
-                    <th>User Role</th>
+                    <th>Role Name</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr v-for="allUser in allUsers" :key="allUser.id">
-                    <td class="fontSize">{{allUser.name}} </td>
-                    <td class="fontSize">{{allUser.email}} </td>
-                    <td class="fontSize">{{allUser.role_name}} </td>
+                  <tr v-for="allRole in allRoles" :key="allRole.id">
+                    <td class="fontSize">{{allRole.role_name}} </td>
                   </tr>
                 </tbody>
               </table>
@@ -50,14 +46,14 @@
 
       data(){
           return{
-              allUsers:{},
+              allRoles:{},
           }
       },
 
       methods:{
           getResults() {
-            axios.get('/api/allusers/')
-              .then(({data}) => this.allUsers = data)
+            axios.get('/api/allRoles/')
+              .then(({data}) => this.allRoles = data)
               .catch()
           },
       },

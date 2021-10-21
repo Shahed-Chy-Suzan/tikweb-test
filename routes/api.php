@@ -27,6 +27,9 @@ Route::group([
 
 Route::post('/profile/{id}', [RoleController::class, 'profile']);   // user's individual Profile show
 Route::get('/allusers', [RoleController::class, 'allusers']);   // user's individual Profile show
+Route::post('/roleInsert', [RoleController::class, 'roleInsert']);   // insert User Role
+Route::get('/allRoles', [RoleController::class, 'allRoles']);   // show all user Role
+Route::put('/updateRole/{id}', [RoleController::class, 'updateRole']);   // show all user Role
 
 
 //----------------------For_CRUD-----------------------------------

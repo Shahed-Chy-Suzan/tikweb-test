@@ -14,9 +14,8 @@
               <img src="backend/img/undraw_profile.svg" class="img-fluid rounded-circle w-50 mb-3" alt="Susan Williams">
               <h3>Name: {{admins.name}}</h3>
               <h3 class="lead">Email: {{admins.email}}</h3>
-              <h3 v-if="admins.user_role == 0" class="lead">Role: Admin</h3>
-              <h3 v-if="admins.user_role == 1" class="lead">Role: Moderator</h3>
-              <h3 v-if="admins.user_role == 2" class="lead">Role: Editor</h3>
+              <h3 class="lead">Role: {{admins.role_name}}</h3>
+
             </div>
           </div>
         </div>

@@ -23,7 +23,23 @@
                   <tr v-for="allUser in allUsers" :key="allUser.id">
                     <td class="fontSize">{{allUser.name}} </td>
                     <td class="fontSize">{{allUser.email}} </td>
-                    <td class="fontSize">{{allUser.role_name}} </td>
+                      <td>
+                    <form @submit.prevent="updateRole(allUser.id)">
+                        <div class="col-md-6 d-inline">
+                          <select v-model="form.role_id" class="form-control" id="Category" required>
+                            <option value="" disabled>Choose a Role from here </option>
+                            <option :value="allRole.id" v-for="allRole in allRoles" :key="allRole.id">
+                              {{ allRole.role_name }}
+                            </option>
+                          </select>
+                          <span class="flex-box col-md-4 d-inline">
+                            <button type="submit" class="submit btn btn-danger text-white"><i
+                                class="far fa-check-square"></i>
+                            </button>
+                          </span>
+                        </div>
+                    </form>
+                      </td>
                   </tr>
                 </tbody>
               </table>
@@ -42,6 +58,9 @@
         if (!User.loggedIn()) {
             this.$router.push({ name:'/' })
         }
+
+        axios.get('/api/allRoles')
+          .then(({data}) => (this.allRoles = data))
       },
 
       created(){
@@ -50,7 +69,11 @@
 
       data(){
           return{
+            form:{
+              role_id :'',
+            },
               allUsers:{},
+              allRoles:{},
           }
       },
 
@@ -59,6 +82,20 @@
             axios.get('/api/allusers/')
               .then(({data}) => this.allUsers = data)
               .catch()
+          },
+          updateRole($id) {
+            console.log($id);
+            console.log(this.form.role_id);
+            axios.put('/api/updateRole/'+$id,this.form)
+            .then(() => {
+                this.$router.push({ name: 'alluser' })
+                Toast.fire({
+                    icon: 'success',
+                    title: 'User Role Updated Successfully',
+                    showCloseButton: true
+                })
+              })
+				    .catch(error => this.errors = error.response.data.errors)
           },
       },
     }
